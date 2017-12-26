@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<form method="post">
+		{% for field in form %}
+			<div>
+				<label>{{ field.label }}</label>
+				{{ field }}
+			</div>
+		{% endfor %}
+		<input type="submit" value="Send">
+	</form>
+{% endblock %}

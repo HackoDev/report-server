@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% for category in categories %}
+		<div>
+			<a href="{{ reverse_url('report', field.id) }}">{{ category.name }}</a>
+		</div>
+	{% else %}
+		<strong>No items</strong>
+	{% endfor %}
+{% endblock %}
